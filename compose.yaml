@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .   # Path to the BackEnd directory
+    ports:
+      - "8080:8080"  # Adjust the port if necessary
+
+  # frontend:
+  #   build:
+  #     context: ./hahn-cargo-simulation   # Path to the FrontEnd directory
+  #   ports:
+  #     - "3000:80"  # Adjust the port if necessary
+
+  # consumer:
+  #   build:
+  #     context: ./hahn-cargo-simulation/consumer  # Ajusta la ruta al directorio del consumidor
+  #   ports:
+  #     - "9081:9081"
+  #   depends_on:
+  #     - rabbitmq
+  #   restart: always
+      
+  # rabbitmq:
+  #   image: rabbitmq:3-management
+  #   container_name: rabbitmq
+  #   ports:
+  #     - "5672:5672"
+  #     - "15672:15672"
